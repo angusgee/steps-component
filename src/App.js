@@ -8,6 +8,10 @@ const messages = [
 ];
 
 function App() {
+  // The useState hook must be called at the top of the component...
+  // not inside an if statement or function call
+  //
+  // Syntax is const [stateVariable, setterFunction] = useState(initialState)
   const [step, setStep] = useState(1);
 
   function handleNext() {
