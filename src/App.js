@@ -13,6 +13,7 @@ function App() {
   //
   // Syntax is const [stateVariable, setterFunction] = useState(initialState)
   const [step, setStep] = useState(1);
+  const [isOpen, setIsOpen] = useState(true);
 
   function handleNext() {
     if (step < 3) setStep(step + 1);
