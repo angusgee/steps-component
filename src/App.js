@@ -1,11 +1,45 @@
 import { useState } from "react";
 import "./App.css";
+import "./index.css";
 
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
   "Invest your new income 🤑",
 ];
+
+function DateCounter() {
+  const [dateStep, setDateStep] = useState(1);
+  const [dateCount, setDateCount] = useState(1);
+
+  const today = new Date();
+
+  const futureDate = new Date();
+  futureDate.setDate(today.getDate() + dateStep);
+  console.log(futureDate.toDateString());
+
+  return (
+    <div>
+      <div className="flex">
+        <button className="btn" onClick={() => setDateStep((s) => s - 1)}>
+          &minus;
+        </button>
+        <p>Step: {dateStep}</p>
+        <button className="btn" onClick={() => setDateStep((s) => s + 1)}>
+          &#43;
+        </button>
+      </div>
+      <div className="flex">
+        <button className="btn">&minus;</button>
+        <p>Count: {dateCount}</p>
+        <button className="btn">&#43;</button>
+      </div>
+      <div className="flex">
+        <p>{`${dateCount} days ago was ${futureDate.toDateString()}`}</p>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   // The useState hook must be called at the top of the component not inside an if statement or function call
@@ -54,6 +88,7 @@ function App() {
           </div>
         </div>
       )}
+      <DateCounter />
     </>
   );
 }

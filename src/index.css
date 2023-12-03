@@ -89,3 +89,9 @@ h3 {
 .close:hover {
   color: #7950f2;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
