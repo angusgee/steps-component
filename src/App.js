@@ -14,11 +14,12 @@ function App() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
-  function handleNext() {
-    if (step < 3) setStep((s) => s + 1);
-  }
   function handlePrevious() {
     if (step > 1) setStep((s) => s - 1);
+  }
+
+  function handleNext() {
+    if (step < 3) setStep((s) => s + 1);
   }
 
   return (
