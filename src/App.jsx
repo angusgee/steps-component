@@ -2,60 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import "./index.css";
 
-// function DateCounter() {
-//   const [dateCount, setDateCount] = useState(1);
-//   const [dateStep, setDateStep] = useState(1);
-
-//   const today = new Date();
-
-//   const date = new Date();
-//   date.setDate(today.getDate() + dateStep);
-//   // console.log(date.toDateString());
-
-//   return (
-//     <div>
-//       <div className="flex">
-//         <input
-//           type="range"
-//           min="0"
-//           max="10"
-//           value={dateStep}
-//           onChange={(e) => setDateStep(Number(e.target.value))}
-//         />
-
-//         <span>
-//           <p>Step: {dateStep}</p>
-//         </span>
-//       </div>
-//       <div className="flex">
-//         <button
-//           className="btn"
-//           onClick={() => setDateCount((c) => c - dateStep)}
-//         >
-//           &minus;
-//         </button>
-//         <p>Count: {dateCount}</p>
-//         <button
-//           className="btn"
-//           onClick={() => setDateCount((c) => c + dateStep)}
-//         >
-//           &#43;
-//         </button>
-//       </div>
-//       <div className="flex">
-//         <span>
-//           {dateCount === 0
-//             ? "Today is "
-//             : dateCount > 0
-//             ? `${dateCount} days from today is `
-//             : `${Math.abs(dateCount)} days ago was `}
-//           {/* <p>{`${dateCount} days ago was ${date.toDateString()}`}</p> */}
-//         </span>
-//       </div>
-//     </div>
-//   );
-// }
-
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -109,7 +55,6 @@ function App() {
           </div>
         </div>
       )}
-      {/* <DateCounter /> */}
     </>
   );
 }
